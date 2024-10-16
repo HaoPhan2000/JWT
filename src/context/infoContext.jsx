@@ -3,7 +3,7 @@ const InfoContext = createContext();
 function InfoProvider({ children }) {
   const [info, setInfo] = useState({
     isLogin: false,
-    user: { email: "" },
+    user: { email: ""},
   });
   const [loading,setLoading]=useState(true)
   return (

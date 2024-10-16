@@ -28,9 +28,12 @@ const Header = () => {
       case "/":
         setCurrent("Home");
         break;
-      case "/user":
+      case "/rank":
         setCurrent("Rank");
         break;
+        case "/game":
+          setCurrent("Game");
+          break;
       default:
         setCurrent("Home");
     }
@@ -39,16 +42,19 @@ const Header = () => {
   const leftItems = [
     {
       label: <Link to={"/"}>Home</Link>,
+      style:{userSelect:"none"},
       key: "Home",
       icon: <HomeFilled />,
     },
     {
-      label: <Link to={"/user"}>Rank</Link>,
+      label: <Link to={"/rank"}>Rank</Link>,
+      style:{userSelect:"none"},
       key: "Rank",
       icon: <OrderedListOutlined />,
     },
     {
       label: <Link to={"/game"}>Game</Link>,
+      style:{userSelect:"none"},
       key: "Game",
       icon:  <FontAwesomeIcon icon={faGamepad} />,
     },
@@ -57,6 +63,7 @@ const Header = () => {
   const rightItems = [
     {
       label: info?.user?.email,
+      style:{userSelect:"none"},
       key: "SubMenu",
       icon: <CaretDownOutlined />,
       children: [

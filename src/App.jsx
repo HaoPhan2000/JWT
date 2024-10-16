@@ -55,7 +55,7 @@ function App() {
             <Route path={PATHS.HOME} element={<Layout />}>
               {/* Home Page will render at the root path */}
               <Route index element={<HomePage />} />
-              <Route path={PATHS.USER} element={<RankPage />} />
+              <Route path={PATHS.RANK} element={<RankPage />} />
               <Route element={<PrivateRoute />}>
                 <Route path={PATHS.GAME} element={<GamePage />} />
               </Route>

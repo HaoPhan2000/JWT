@@ -37,8 +37,12 @@ const getRankApi = () => {
   const URL_API = "/v1/api/rank";
   return instance.get(URL_API);
 };
+const updateScore = (dataUser) => {
+  const URL_API = "/v1/api/updateScore";
+  return instance.put(URL_API,dataUser);
+};
 const confirmOtp=(dataUser)=>{
   const URL_API = "/v1/api/confirmOtp";
   return instance.post(URL_API, dataUser);
 }
-export { registerApi, loginApi, getRankApi, refreshTokenApi, logoutApi,infoAccountApi,confirmOtp,forgotPasswordApi,resetPasswordApi};
+export { registerApi, loginApi, getRankApi, refreshTokenApi, logoutApi,infoAccountApi,confirmOtp,forgotPasswordApi,resetPasswordApi,updateScore};

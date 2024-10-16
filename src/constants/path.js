@@ -1,6 +1,6 @@
 export default {
     HOME: "/",
-    USER: "/user",
+    RANK: "/rank",
     GAME: "/game",
     REGISTER: "/register",
     LOGIN: "/login",
