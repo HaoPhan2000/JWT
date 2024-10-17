@@ -21,7 +21,7 @@ const GamePage = () => {
     objcanvas.height = contentHeight;
 
     const bg = new Image();
-    bg.src = "src/assets/images/bg.jpg";
+    bg.src = new URL('/src/assets/images/bg.jpg', import.meta.url).href;
 
     let locationx = contentWidth / 4;
     let locationy = contentHeight / 2;
